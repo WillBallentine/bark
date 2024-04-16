@@ -8,7 +8,7 @@ Bark is still a work in progress and as of this latest update to this repo, it i
 Feel free to give it a clone and run by moving into the bark directory and then running: go run main.go
 NOTE: you must have Go installed for this to work! Go here to install for your system if not already installed: https://go.dev/dl/
 
-Basic Syntax:
+Basic Keywords:
  - toy: this defines our variables -- toy five = 5;
 - trick: this is how we define our functions -- trick(x, y) {x + y;};
 - goodboi: this is our true boolean value
