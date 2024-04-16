@@ -6,6 +6,7 @@ This is the language that your doggo would code in cause he is such a goodboi (t
 Bark is still a work in progress and as of this latest update to this repo, it is only generating tokens with the basic syntax and a basic repl. More is coming soon though!
 
 Feel free to give it a clone and run by moving into the bark directory and then running: go run main.go
+NOTE: you must have Go installed for this to work! Go here to install for your system if not already installed: https://go.dev/dl/
 
 Basic Syntax:
  - toy: this defines our variables -- toy five = 5;
