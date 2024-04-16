@@ -1,5 +1,5 @@
 # bark
-##Welcome to the Bark Programming Language!
+## Welcome to the Bark Programming Language!
 
 This is the language that your doggo would code in cause he is such a goodboi (thats the true boolean in Bark btw)!
 
