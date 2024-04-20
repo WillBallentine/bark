@@ -12,6 +12,13 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
+	fmt.Printf(`
+   / \__
+  (    @\___
+  /         O
+ /   (_____/
+/_____/   U
+`)
 	fmt.Printf("Hello %s! This is the Bark Programming Language!\n", user.Username)
 	fmt.Printf("Feel free to input some commands!\n")
 	repl.Start(os.Stdin, os.Stdout)
