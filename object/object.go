@@ -14,6 +14,7 @@ const (
 	FUNCTION_OBJ     = "FUNCTION"
 	INTEGER_OBJ      = "INTEGER"
 	BOOLEAN_OBJ      = "BOOLEAN"
+	STRING_OBJ       = "STRING"
 	NULL_OBJ         = "NULL"
 	RETURN_VALUE_OBJ = "RETURN_VALUE"
 	ERROR_OBJ        = "ERROR"
@@ -28,6 +29,10 @@ type Function struct {
 	Parameters []*ast.Identifier
 	Body       *ast.BlockStatement
 	Env        *Environment
+}
+
+type String struct {
+	Value string
 }
 
 type Integer struct {
@@ -47,6 +52,9 @@ type Return_Value struct {
 type Error struct {
 	Message string
 }
+
+func (st *String) Type() ObjectType { return STRING_OBJ }
+func (st *String) Inspect() string  { return st.Value }
 
 func (f *Function) Type() ObjectType { return FUNCTION_OBJ }
 func (f *Function) Inspect() string {

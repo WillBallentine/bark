@@ -45,6 +45,11 @@ type Boolean struct {
 	Value bool
 }
 
+type StringLiteral struct {
+	Token token.Token
+	Value string
+}
+
 type IfExpression struct {
 	Token       token.Token
 	Condition   Expression
@@ -68,6 +73,10 @@ type CallExpression struct {
 	Function  Expression
 	Arguments []Expression
 }
+
+func (st *StringLiteral) expressionNode()      {}
+func (st *StringLiteral) TokenLiteral() string { return st.Token.Literal }
+func (st *StringLiteral) String() string       { return st.Token.Literal }
 
 func (ce *CallExpression) expressionNode()      {}
 func (ce *CallExpression) TokenLiteral() string { return ce.Token.Literal }
