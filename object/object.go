@@ -12,6 +12,7 @@ type ObjectType string
 
 const (
 	FUNCTION_OBJ     = "FUNCTION"
+	BUILTIN_OBJ      = "BUILTIN"
 	INTEGER_OBJ      = "INTEGER"
 	BOOLEAN_OBJ      = "BOOLEAN"
 	STRING_OBJ       = "STRING"
@@ -30,6 +31,12 @@ type Function struct {
 	Body       *ast.BlockStatement
 	Env        *Environment
 }
+
+type BuiltIn struct {
+	Fn BuiltInFunction
+}
+
+type BuiltInFunction func(args ...Object) Object
 
 type String struct {
 	Value string
@@ -52,6 +59,9 @@ type Return_Value struct {
 type Error struct {
 	Message string
 }
+
+func (bi *BuiltIn) Type() ObjectType { return BUILTIN_OBJ }
+func (bi *BuiltIn) Inspect() string  { return "builtin function" }
 
 func (st *String) Type() ObjectType { return STRING_OBJ }
 func (st *String) Inspect() string  { return st.Value }
