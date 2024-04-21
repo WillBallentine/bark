@@ -11,9 +11,14 @@ This is the language that your doggo would code in cause he is such a goodboi (t
 
 Bark is still a work in progress and as of this latest update to this repo, it can now perform integer operations, boolean checks, prefix operators, nested conditionals, return statements, functions, and closures via the REPL.
 
-Basic built in command len() is also now supported for strings!
+Built in Commands are also now available:
+- len() - gets the length of a string or array
+- first() - gets the first element of an array
+- last() - gets the last element of an array
+- rest() - returns a new array with all elements except the first
+- push() - adds a new element to the end of the array (example: push(myArray, 7))
 
-More is coming soon! Up next: Arrays!
+More is coming soon! Up next: Hashes!
 
 Feel free to give it a clone and run by moving into the bark directory and then running: "go run main.go"
 
