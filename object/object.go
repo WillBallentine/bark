@@ -18,6 +18,7 @@ const (
 	STRING_OBJ       = "STRING"
 	NULL_OBJ         = "NULL"
 	RETURN_VALUE_OBJ = "RETURN_VALUE"
+	ARRAY_OBJ        = "ARRAY"
 	ERROR_OBJ        = "ERROR"
 )
 
@@ -56,8 +57,28 @@ type Return_Value struct {
 	Value Object
 }
 
+type Array struct {
+	Elements []Object
+}
+
 type Error struct {
 	Message string
+}
+
+func (ar *Array) Type() ObjectType { return ARRAY_OBJ }
+func (ar *Array) Inspect() string {
+	var out bytes.Buffer
+
+	elements := []string{}
+	for _, e := range ar.Elements {
+		elements = append(elements, e.Inspect())
+	}
+
+	out.WriteString("[")
+	out.WriteString(strings.Join(elements, ", "))
+	out.WriteString("]")
+
+	return out.String()
 }
 
 func (bi *BuiltIn) Type() ObjectType { return BUILTIN_OBJ }
