@@ -9,9 +9,9 @@
 ```
 This is the language that your doggo would code in cause he is such a goodboi (thats the true boolean in Bark btw)! Bark is written in Go and utilizes only the baked in Go functionality. Thanks to Thorsten Ball and his book "Writing an Interpreter in Go"! This has been a major help in getting this project off the ground!
 
-Bark is still a work in progress and as of this latest update to this repo, it can now perform integer operations, boolean checks, prefix operators, nested conditionals, return statements, functions, and closures via the REPL.
+Bark is still a work in progress and as of this latest update to this repo, it can now perform integer operations, boolean checks, string concat, array indexing, builtin functions, prefix operators, nested conditionals, return statements, functions, and closures via the REPL.
 
-Built in Commands are also now available:
+Built in functions now available:
 - len() - gets the length of a string or array
 - first() - gets the first element of an array
 - last() - gets the last element of an array
