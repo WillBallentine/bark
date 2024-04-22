@@ -9,7 +9,7 @@
 ```
 This is the language that your doggo would code in cause he is such a goodboi (thats the true boolean in Bark btw)! Bark is written in Go and utilizes only the baked in Go functionality. Thanks to Thorsten Ball and his book "Writing an Interpreter in Go"! This has been a major help in getting this project off the ground!
 
-Bark is still a work in progress and as of this latest update to this repo, it can now perform integer operations, boolean checks, string concat, array indexing, builtin functions, prefix operators, nested conditionals, return statements, functions, and closures via the REPL.
+Bark is a scripting language with its own REPL. It is built out with many standard programming language features and data types such as integer operations, boolean checks, string concat, array indexing, hash indexing, builtin functions, prefix operators, nested conditionals, return statements, functions, and closures.
 
 Built in functions now available:
 - len() - gets the length of a string or array
@@ -17,8 +17,7 @@ Built in functions now available:
 - last() - gets the last element of an array
 - rest() - returns a new array with all elements except the first
 - push() - adds a new element to the end of the array (example: push(myArray, 7))
-
-More is coming soon! Up next: Hashes!
+- speak() - this is Bark's "print" command. Anything put inbetween the parenthesis will be printed to the screen
 
 Feel free to give it a clone and run by moving into the bark directory and then running: "go run main.go"
 
@@ -50,3 +49,12 @@ Example syntax:
 	} woofwise {
 		fetchit badboi;
 	}
+
+
+## Future Ideas:
+- eventually, I would like to allow users to create files ending in .bark to be run through the interpreter. For now, this language only works in the REPL. 
+- I would also like to implement more builtin functions and features to more fully represent a production ready language.
+
+
+## Parting Note:
+This was a fun project that taught me a lot but is by no means meant to be a production level language. If you have any ideas or features you would like to add to Bark, please submit a PR and lets get Barking!
