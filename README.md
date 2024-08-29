@@ -29,7 +29,7 @@ Basic Keywords:
 - goodboi: this is our true boolean value
 - badboi: this is our false boolean value
 - borkf: this is how we start an if statement -- borkf (10 > 5) { fetchit goodboit}
-- woofwise: this is how we continue an if statment with other conditions (else in other languages) -- borkf (10 > 5) { fetchit goodboit;} woofwise {fetchit badboi;}
+- woofwise: this is how we continue an if statment with other conditions (else in other languages) -- borkf (10 > 5) { fetchit goodboi;} woofwise {fetchit badboi;}
 - fetchit: this is our return statement keyword
 
 
